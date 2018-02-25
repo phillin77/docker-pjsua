@@ -20,9 +20,9 @@ RUN wget http://www.pjsip.org/release/2.7.1/pjproject-2.7.1.tar.bz2 && \
     cd .. && rm -rf pjproject-2.7.1 && rm -rf *.tar.bz2 && \
     rm -rf /var/cache/apt/* /tmp/* /var/tmp/*
 
-COPY config/pjsua.conf           /pjsua.conf
+COPY ./pjsua.conf           /pjsua.conf
 
-COPY config/start.sh /
+COPY ./start.sh /
 RUN chmod +x /start.sh
 
 CMD /start.sh
