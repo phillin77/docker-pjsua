@@ -1,15 +1,10 @@
 # PJSIP/PJSUA
 #
-# VERSION               0.0.2
+# VERSION               0.0.3
 
 FROM buildpack-deps:jessie
 
-LABEL maintainer="phillin77@gmail.com"
-LABEL version="0.0.2"
-LABEL description="This text illustrates \
-that label-values can span multiple lines."
-
-WORKDIR ~/
+WORKDIR /tmp
 
 RUN apt-get update -yy && \
     apt-get install -yy \
